@@ -4,9 +4,9 @@ include <../OpenScadDesigns/chamferedCylinders.scad>
 firstLayerZ = 0.3;
 upperLayersZ = 0.2;
 
-caseExteriorX = 75 + 0.3;
-caseExteriorZ = 11.75 + 0.3;
-caseCornerRadius = 12.6;
+caseExteriorX = 85.6 + 0.3;
+caseExteriorZ = 12.4 + 0.3;
+caseCornerRadius = 6;
 
 cornersCtrsX = caseExteriorX -2*caseCornerRadius;
 
@@ -21,7 +21,7 @@ module exterior()
   hull()
   {
     protectorExtCorner(0);
-    protectorExtCorner(35); //65);
+    protectorExtCorner(70);
   }
 }
 
@@ -88,6 +88,12 @@ module clip(d=0)
 if(developmentRender)
 {
 	display() itemModule();
+
+  // display() difference()
+  // {
+  //   itemModule();
+  //   tcu([-200, 10, -200], 400);
+  // }
 }
 else
 {
