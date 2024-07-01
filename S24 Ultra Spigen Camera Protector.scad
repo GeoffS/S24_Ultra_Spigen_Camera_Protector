@@ -1,5 +1,5 @@
-include <MakeInclude.scad>
-include <chamferedCylinders.scad>
+include <../OpenScadDesigns/MakeInclude.scad>
+include <../OpenScadDesigns/chamferedCylinders.scad>
 
 firstLayerZ = 0.3;
 upperLayersZ = 0.2;
@@ -80,18 +80,14 @@ module itemModule()
   }
 }
 
-module clip()
+module clip(d=0)
 {
 	//tc([-200, -400, -10], 400);
 }
 
 if(developmentRender)
 {
-	difference()
-	{
-		itemModule();
-		clip();
-	}
+	display() itemModule();
 }
 else
 {
