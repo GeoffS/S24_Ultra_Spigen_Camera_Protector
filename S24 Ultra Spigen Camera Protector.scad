@@ -4,9 +4,9 @@ include <../OpenScadDesigns/chamferedCylinders.scad>
 firstLayerZ = 0.3;
 upperLayersZ = 0.2;
 
-caseExteriorX = 85.6 + 0.3;
+caseExteriorX = 85.4 + 0.3;
 caseExteriorZ = 12.4 + 0.3;
-caseCornerRadius = 6;
+caseCornerRadius = 5;
 
 cornersCtrsX = caseExteriorX -2*caseCornerRadius;
 
